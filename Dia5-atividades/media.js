@@ -7,4 +7,4 @@ let n4 = leia.questionFloat("Digite nota 4: ");
 
 let media = (n1+n2+n3+n4)/4;
 
-console.log("A media do aluno foi: %f", media.toFixed(2));
+console.log("A media do aluno foi: %f"+ media.toFixed(2));

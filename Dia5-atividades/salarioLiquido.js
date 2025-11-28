@@ -7,4 +7,4 @@ let descontos = leia.questionFloat("Digite seus descontos: ");
 
 let salarioLiquido = salarioBruto + adicionalNoturno + (horasExtras * 5) - descontos;
 
-console.log("SAlario liquido: %f" , salarioLiquido);
+console.log("SAlario liquido: %f" + salarioLiquido);

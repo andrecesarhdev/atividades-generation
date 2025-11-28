@@ -7,4 +7,4 @@ let n4 = leia.questionFloat("Digite nota 4: ");
 
 let diferenca = (n1*n2)-(n3*n4);
 
-console.log("A difenrença entre os valores sao: ", diferenca);
+console.log("A difenrença entre os valores sao: " + diferenca);

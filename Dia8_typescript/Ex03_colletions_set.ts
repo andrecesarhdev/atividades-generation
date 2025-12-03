@@ -24,7 +24,7 @@ for (let i = 0; i < 10; i++) {
         console.log(`valor repetido, digite um numero valido.\n`);
         i-- // decremento para o contador nao pular um indice faz ele ficar na mesma posição.
     }else{
-        numeros.add(number) // adiciona numero os numeros que passaram na validação do if ou seja ou numeros nao repetidos
+        numeros.add(number) // adiciona os numeros que passaram na validação do if ou seja ou numeros nao repetidos
         // console.log(`numero adicionado.`);
     }
 }                                         //Usar o Spread Operator [...numeros] para exibir colletions set atraves de interpolação de string

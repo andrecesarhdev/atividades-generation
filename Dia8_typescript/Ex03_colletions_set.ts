@@ -17,12 +17,14 @@ const numeros: Set<number> = new Set<number>([]);
 
 // estrutura para receber 10 numeros em sequencia e validar se é repetido ou nao.
 for (let i = 0; i < 10; i++) {
-    let number = leia.questionInt(`digite o numero nao repetido${i + 1}: `);
+    let number = leia.questionInt(`digite o ${i + 1}º numero inteiro: `);
     numeros.add(number)
-    console.log(`listar dados do set: ${[...numeros]}`);
-
-
 }
 
+console.log(`listar dados do set:`);
+for(const n of numeros){
+    console.log(n);
+    
+}
 
 

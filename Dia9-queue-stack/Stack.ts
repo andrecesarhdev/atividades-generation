@@ -1,70 +1,70 @@
-interface queueInterface<Type> {
-   enqueue(dataItem: Type): void;
-   dequeue(): Type | undefined;
-   isEmpty(): boolean;
-   count(): number;
-   printQueue(): void;
-   peek(): Type | undefined;
-   contains(dataItem: Type): boolean;
-   clear(): void;
-}
-
-export class Queue<Type> implements queueInterface<Type> {
-
-   private QueueData: Array<Type> = [];
-
-   constructor() { }
-
-   isEmpty(): boolean {
-      let result = this.QueueData.length <= 0;
-      return result;
-   }
-
-   enqueue(dataItem: Type): void {
-      this.QueueData.push(dataItem);
-   }
-
-   dequeue(): Type | undefined {
-      if (this.isEmpty()) {
-         console.log("A fila está vazia");
-         return;
-      } else {
-         var element = this.QueueData.shift();
-         return element;
-      }
-   }
-
-   count(): number {
-      let len = this.QueueData.length;
-      return len;
-   }
-
-   printQueue(): void {
-      for (let i = 0; i < this.QueueData.length; i++) {
-         console.log(this.QueueData[i]);
-      }
-   }
-
-   peek(): Type | undefined {
-      if (this.isEmpty()) {
-         console.log("A fila está vazia");
-         return;
-      } else {
-         var element = this.QueueData[0];
-         return element;
-      }
-   }
-
-   contains(dataItem: Type): boolean {
-      if (this.QueueData.includes(dataItem)) {
-         return true;
-      } else {
-         return false;
-      }
-   }
-
-   clear(): void {
-      this.QueueData.length = 0;
-   }
-
-}
+interface stackInterface<Type> {
+    push(dataItem: Type): void;
+    pop(): Type | undefined;
+    isEmpty(): boolean;
+    count(): number;
+    printStack(): void;
+    peek(): Type | undefined;
+    contains(dataItem: Type): boolean;
+    clear(): void;
+ }
+ 
+ export class Stack<Type> implements stackInterface<Type> {
+ 
+    private StackData: Array<Type> = [];
+ 
+    constructor() { }
+ 
+    isEmpty(): boolean {
+       let result = this.StackData.length <= 0;
+       return result;
+    }
+ 
+    push(dataItem: Type): void {
+       this.StackData.push(dataItem);
+    }
+ 
+    pop(): Type | undefined {
+       if (this.isEmpty()) {
+          console.log("A fila está vazia");
+          return;
+       } else {
+          var element = this.StackData.pop();
+          return element;
+       }
+    }
+ 
+    count(): number {
+       let len = this.StackData.length;
+       return len;
+    }
+ 
+    printStack(): void {
+       for (let i = this.StackData.length - 1; i >= 0 ; i--) {
+          console.log(this.StackData[i]);
+       }
+    }
+ 
+    peek(): Type | undefined {
+       if (this.isEmpty()) {
+          console.log("A fila está vazia");
+          return;
+       } else {
+          var element = this.StackData[this.StackData.length - 1];
+          return element;
+       }
+    }
+ 
+    contains(dataItem: Type): boolean {
+       if (this.StackData.includes(dataItem)) {
+          return true;
+       } else {
+          return false;
+       }
+    }
+ 
+    clear(): void {
+       this.StackData.length = 0;
+    }
+ 
+ }

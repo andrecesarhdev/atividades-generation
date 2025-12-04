@@ -18,11 +18,11 @@ let encontrado = false;
 
 for(let i = 0; i < numeros.length; i++){
     if (numeros[i] === n1) {
-        console.log("numero encontrado na posição: " + i);
+        console.log("O numero esta localizado na posição: " + i);
         encontrado = true;
         break;
     }
 }
 if (!encontrado){
-    console.log("Nao foi encontrado");   
+    console.log("O numero nao foi encontrado");   
 }

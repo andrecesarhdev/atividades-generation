@@ -17,18 +17,19 @@ const numeros: Set<number> = new Set<number>([]);
 
 // estrutura para receber 10 numeros em sequencia e validar se é repetido ou nao.
 for (let i = 0; i < 10; i++) {
-    let number = leia.questionInt(`digite o numero ${i+1}: `);
-
-        //numeros.has retorna true se algum elemento se repetir
-    if (numeros.has(number)) {
-        console.log(`valor repetido, digite um numero valido.\n`);
-        i-- // decremento para o contador nao pular um indice faz ele ficar na mesma posição.
-    }else{
-        numeros.add(number) // adiciona os numeros que passaram na validação do if ou seja os numeros nao repetidos
-        // console.log(`numero adicionado.`);
-    }
-}                                         //Usar o Spread Operator [...numeros] para exibir colletions set atraves de interpolação de string
-console.log( `os numeros adicionados foram: ${[...numeros]}`);
+    let number = leia.questionInt(`digite o numero nao repetido${i+1}: `);
+    numeros.add(number)
+    
+    //numeros.has retorna true se algum elemento se repetir
+    // if (numeros.has(number)) {
+        //     console.log(`valor repetido, digite um numero valido.\n`);
+        //     // i-- // decremento para o contador nao pular um indice faz ele ficar na mesma posição.
+        // }else{
+            //      // adiciona os numeros que passaram na validação do if ou seja os numeros nao repetidos
+            //     // console.log(`numero adicionado.`);
+            // }
+        }                                         //Usar o Spread Operator [...numeros] para exibir colletions set atraves de interpolação de string
+        console.log( `listar dados do set: ${[...numeros]}`);
 
 
 
